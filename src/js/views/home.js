@@ -13,7 +13,7 @@ export const Home = () => {
 			{store.personajes.map((element, id) => {
 				return (
 					<>
-						<CardPersonaje key={id} personajes={element} />{" "}
+						<CardPersonaje />
 					</>
 				);
 			})}

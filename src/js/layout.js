@@ -3,16 +3,11 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
-import { Demo } from "./views/demo";
-import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import { CardPersonaje } from "./component/cardPersonaje";
-import { CardPlanetas } from "./component/cardPlanetas";
-import { CardVehículos } from "./component/cardVehículos";
-import { VistaPersonajes } from "./views/VistaPersonajes";
+import { VistaPersonajes } from "./views/persona";
 import { VistaPlanetas } from "./views/VistaPlanetas";
 import { VistaVehículos } from "./views/VistaVehículos";
 
@@ -28,17 +23,11 @@ const Layout = () => {
 				<ScrollToTop>
 					<Navbar />
 					<Switch>
-						<Route exact path="/">
+						<Route exact path={"/"}>
 							<Home />
 						</Route>
-						<Route exact path="/Personajes">
+						<Route exact path={"/persona/:personaid"}>
 							<VistaPersonajes />
-						</Route>
-						<Route exact path="/Planetas">
-							<CardPlanetas />
-						</Route>
-						<Route exact path="/Vehículos">
-							<CardVehículos />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
